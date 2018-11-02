@@ -1,0 +1,25 @@
+.loading {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.loading-indicator {
+	width: 70px;
+	height: 70px;
+	border: white 2px solid;
+	border-top-color: aqua;
+	border-radius: 50%;
+	margin-top: 50px;
+	animation: 1.5s rotate linear infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
