@@ -9,7 +9,6 @@ class Blocks extends Component {
 		this.socket = new WebSocket('wss://ws.blockchain.info/inv')
 		this.socket.onopen = () => {
 			this.socket.send(JSON.stringify({"op":"blocks_sub"}))
-			console.log('openned')
 		}
 
 		this.socket.onmessage = data => {
@@ -17,7 +16,6 @@ class Blocks extends Component {
 			const foundBy = out.foundBy.description
 			const { blockIndex, totalBTCSent } = out
 			this.setState({ foundBy, totalBTCSent, blockIndex })
-			console.log(foundBy, blockIndex, totalBTCSent)
 		}
 	}
 
